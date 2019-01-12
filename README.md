@@ -1,7 +1,6 @@
 # Lyrics Genius
 
-This Java Swing (GUI) application aims to ease the process of writing song lyrics. It lets the user to find rhymes for the word they entered using the parameters provided. These parameters include matching vowel/consonanat series, match direction, and match length. Java Regular Expressions have been used. In the implementation of the GUI C.R.A.P. (Contrast - Repetition - Alignment -
-Proximity) design principles have been followed.
+This Java Swing (GUI) application aims to ease the process of writing song lyrics. It lets the user to find rhymes for the word they entered using the parameters provided. These parameters include matching vowel/consonanat groups, match direction, and match length. Java Regular Expressions have been used. In the implementation of the graphical user interface of the application the C.R.A.P. (Contrast - Repetition - Alignment - Proximity) design principles have been followed.
 
 ## Getting Started
 
