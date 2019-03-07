@@ -223,6 +223,14 @@ public class RhymeEngine {
                 else if (matchVow && matchCon)
                     makeFullRhyme(input, inList, outList);
                 break;
+            default:
+                if (matchVow && !matchCon)
+                    makeVowelRhymeFromTail(input, inList, outList, length);
+                else if (!matchVow && matchCon)
+                    makeConsonantRhymeFromTail(input, inList, outList, length);
+                else if (matchVow && matchCon)
+                    makeFullRhymeFromTail(input, inList, outList, length);
+                break;
         }
     }
 

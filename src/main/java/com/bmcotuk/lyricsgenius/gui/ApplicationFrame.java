@@ -27,7 +27,7 @@ import java.util.List;
 
 public class ApplicationFrame extends JFrame {
 
-    private static final Logger       logger         = Logger.getLogger(RhymeEngine.class);
+    private static final Logger       logger       = Logger.getLogger(RhymeEngine.class);
     private              ButtonGroup  rdbtnGroup;
     private              JButton      buttonDecrement;
     private              JButton      buttonIncrement;
@@ -53,13 +53,13 @@ public class ApplicationFrame extends JFrame {
     private final        JLabel       labelWriteHere;
     private final        JScrollPane  scrollPane;
     private final        JTextArea    lyricsArea;
-    private              Color        colorLabel     = Color.WHITE;
-    private static final String       DIR_ALL_WORDS  = "all_en.txt";
-    private static final String       DIR_USER_WORDS = "user.txt";
-    private static final String       DIR_APP_LOGO   = "rhymerLogo.ico";
-    private static       int          degree         = 2;
-    private static final List<String> wordsAll       = new ArrayList();
-    private static final List<String> wordsRhyming   = new ArrayList();
+    private              Color        colorLabel   = Color.WHITE;
+    private static       String       DIR_ALL_WORDS;
+    private static       String       DIR_USER_WORDS;
+    private static final String       DIR_APP_LOGO = "rhymerLogo.ico";
+    private static       int          degree       = 2;
+    private static final List<String> wordsAll     = new ArrayList();
+    private static final List<String> wordsRhyming = new ArrayList();
 
     public static void main(String[] args) {
         EventQueue.invokeLater(() -> {
@@ -70,6 +70,9 @@ public class ApplicationFrame extends JFrame {
                 ImageIcon frameIconImg = new ImageIcon(DIR_APP_LOGO);
                 frame.setIconImage(frameIconImg.getImage());
                 frame.setVisible(true);
+                String languageDir = ConfigurationLoader.getString("language");
+                DIR_ALL_WORDS = languageDir + "/all.txt";
+                DIR_USER_WORDS = languageDir + "/user.txt";
                 RhymeEngine.getInstance().getAllWords(DIR_ALL_WORDS, wordsAll);
                 RhymeEngine.getInstance().getAllWords(DIR_USER_WORDS, wordsAll);
                 Collections.sort(wordsAll);
