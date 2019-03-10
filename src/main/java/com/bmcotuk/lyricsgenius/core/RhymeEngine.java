@@ -1,7 +1,7 @@
 package com.bmcotuk.lyricsgenius.core;
 
 import com.bmcotuk.lyricsgenius.conf.ConfigurationLoader;
-import com.bmcotuk.lyricsgenius.data.MatchFrom;
+import com.bmcotuk.lyricsgenius.enums.MatchFrom;
 import com.bmcotuk.lyricsgenius.gui.ApplicationFrame;
 import org.apache.log4j.Logger;
 
@@ -34,14 +34,19 @@ public class RhymeEngine {
     }
 
     private void makeVowelRhyme(String input, List<String> inList, List<String> outList) {
+
+        long startTime = System.currentTimeMillis();
         String inputRegex = prepare(input).replaceAll(CONSONANT_ONE_OR_MORE_REGEX, CONSONANT_ZERO_OR_MORE_REGEX);
         inputRegex = CONSONANT_ZERO_OR_MORE_REGEX + inputRegex + CONSONANT_ZERO_OR_MORE_REGEX;
         compileAndFillResults(inputRegex, inList, outList);
-        logger.info("Found " + outList.size() + " rhymes out of " + inList.size() + " words.");
+
+        long endTime = System.currentTimeMillis();
+        logger.info("Found " + outList.size() + " rhymes out of " + inList.size() + " words in " + (endTime - startTime) + " milliseconds.");
     }
 
     private void makeVowelRhymeFromHead(String input, List<String> inList, List<String> outList, int length) {
 
+        long startTime = System.currentTimeMillis();
         Pattern patternVowels = Pattern.compile(VOWEL_ONE_OR_MORE_REGEX);
         String[] matches = patternVowels.matcher(input)
                                         .results()
@@ -57,11 +62,14 @@ public class RhymeEngine {
         sb.append(").*");
 
         compileAndFillResults(sb.toString(), inList, outList);
-        logger.info("Found " + outList.size() + " rhymes out of " + inList.size() + " words.");
+
+        long endTime = System.currentTimeMillis();
+        logger.info("Found " + outList.size() + " rhymes out of " + inList.size() + " words in " + (endTime - startTime) + " milliseconds.");
     }
 
     private void makeVowelRhymeFromTail(String input, List<String> inList, List<String> outList, int length) {
 
+        long startTime = System.currentTimeMillis();
         Pattern patternVowels = Pattern.compile(VOWEL_ONE_OR_MORE_REGEX);
         String[] matches = patternVowels.matcher(input)
                                         .results()
@@ -77,18 +85,25 @@ public class RhymeEngine {
         sb.append(")$");
 
         compileAndFillResults(sb.toString(), inList, outList);
-        logger.info("Found " + outList.size() + " rhymes out of " + inList.size() + " words.");
+
+        long endTime = System.currentTimeMillis();
+        logger.info("Found " + outList.size() + " rhymes out of " + inList.size() + " words in " + (endTime - startTime) + " milliseconds.");
     }
 
     private void makeConsonantRhyme(String input, List<String> inList, List<String> outList) {
+
+        long startTime = System.currentTimeMillis();
         String inputRegex = prepare(input).replaceAll(VOWEL_ONE_OR_MORE_REGEX, VOWEL_ZERO_OR_MORE_REGEX);
         inputRegex = VOWEL_ZERO_OR_MORE_REGEX + inputRegex + VOWEL_ZERO_OR_MORE_REGEX;
         compileAndFillResults(inputRegex, inList, outList);
-        logger.info("Found " + outList.size() + " rhymes out of " + inList.size() + " words.");
+
+        long endTime = System.currentTimeMillis();
+        logger.info("Found " + outList.size() + " rhymes out of " + inList.size() + " words in " + (endTime - startTime) + " milliseconds.");
     }
 
     private void makeConsonantRhymeFromHead(String input, List<String> inList, List<String> outList, int length) {
 
+        long startTime = System.currentTimeMillis();
         Pattern patternVowels = Pattern.compile(CONSONANT_ONE_OR_MORE_REGEX);
         String[] matches = patternVowels.matcher(input)
                                         .results()
@@ -104,11 +119,14 @@ public class RhymeEngine {
         sb.append(").*");
 
         compileAndFillResults(sb.toString(), inList, outList);
-        logger.info("Found " + outList.size() + " rhymes out of " + inList.size() + " words.");
+
+        long endTime = System.currentTimeMillis();
+        logger.info("Found " + outList.size() + " rhymes out of " + inList.size() + " words in " + (endTime - startTime) + " milliseconds.");
     }
 
     private void makeConsonantRhymeFromTail(String input, List<String> inList, List<String> outList, int length) {
 
+        long startTime = System.currentTimeMillis();
         Pattern patternVowels = Pattern.compile(CONSONANT_ONE_OR_MORE_REGEX);
         String[] matches = patternVowels.matcher(input)
                                         .results()
@@ -124,18 +142,25 @@ public class RhymeEngine {
         sb.append(")$");
 
         compileAndFillResults(sb.toString(), inList, outList);
-        logger.info("Found " + outList.size() + " rhymes out of " + inList.size() + " words.");
+
+        long endTime = System.currentTimeMillis();
+        logger.info("Found " + outList.size() + " rhymes out of " + inList.size() + " words in " + (endTime - startTime) + " milliseconds.");
     }
 
     private void makeFullRhyme(String input, List<String> inList, List<String> outList) {
+
+        long startTime = System.currentTimeMillis();
         for (String s : inList)
             if (prepare(s).equals(prepare(input)))
                 outList.add(s);
-        logger.info("Found " + outList.size() + " rhymes out of " + inList.size() + " words.");
+
+        long endTime = System.currentTimeMillis();
+        logger.info("Found " + outList.size() + " rhymes out of " + inList.size() + " words in " + (endTime - startTime) + " milliseconds.");
     }
 
     private void makeFullRhymeFromHead(String input, List<String> inList, List<String> outList, int length) {
 
+        long startTime = System.currentTimeMillis();
         input = prepare(input);
         if (input.length() < length)
             return;
@@ -143,11 +168,14 @@ public class RhymeEngine {
         for (String s : inList)
             if (prepare(s).startsWith(input.substring(0, length)))
                 outList.add(s);
-        logger.info("Found " + outList.size() + " rhymes out of " + inList.size() + " words.");
+
+        long endTime = System.currentTimeMillis();
+        logger.info("Found " + outList.size() + " rhymes out of " + inList.size() + " words in " + (endTime - startTime) + " milliseconds.");
     }
 
     private void makeFullRhymeFromTail(String input, List<String> inList, List<String> outList, int length) {
 
+        long startTime = System.currentTimeMillis();
         input = prepare(input);
         if (input.length() < length)
             return;
@@ -155,11 +183,14 @@ public class RhymeEngine {
         for (String s : inList)
             if (prepare(s).endsWith(input.substring(input.length() - length)))
                 outList.add(s);
-        logger.info("Found " + outList.size() + " rhymes out of " + inList.size() + " words.");
+
+        long endTime = System.currentTimeMillis();
+        logger.info("Found " + outList.size() + " rhymes out of " + inList.size() + " words in " + (endTime - startTime) + " milliseconds.");
     }
 
     private void compileAndFillResults(String inputRegex, List<String> inList, List<String> outList) {
 
+        long startTime = System.currentTimeMillis();
         Pattern pattern = Pattern.compile(inputRegex);
         logger.info("Input regular expression: " + inputRegex);
         for (String s : inList)

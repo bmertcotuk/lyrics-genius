@@ -1,5 +1,6 @@
 /home/bmc/IdeaProjects/LyricsGenius/src/main/java/com/bmcotuk/lyricsgenius/core/RhymeEngine.java
+/home/bmc/IdeaProjects/LyricsGenius/src/main/java/com/bmcotuk/lyricsgenius/enums/MatchFrom.java
 /home/bmc/IdeaProjects/LyricsGenius/src/main/java/com/bmcotuk/lyricsgenius/gui/ResultsFrame.java
 /home/bmc/IdeaProjects/LyricsGenius/src/main/java/com/bmcotuk/lyricsgenius/conf/ConfigurationLoader.java
-/home/bmc/IdeaProjects/LyricsGenius/src/main/java/com/bmcotuk/lyricsgenius/data/MatchFrom.java
+/home/bmc/IdeaProjects/LyricsGenius/src/main/java/com/bmcotuk/lyricsgenius/enums/Language.java
 /home/bmc/IdeaProjects/LyricsGenius/src/main/java/com/bmcotuk/lyricsgenius/gui/ApplicationFrame.java

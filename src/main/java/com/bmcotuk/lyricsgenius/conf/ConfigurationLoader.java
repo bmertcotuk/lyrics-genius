@@ -18,24 +18,25 @@ import java.util.stream.Collectors;
  */
 public class ConfigurationLoader {
 
-    private static final Logger              logger                  = Logger.getLogger(ConfigurationLoader.class);
-    private static final String              CONFIGURATION_FILE_NAME = "configuration.properties";
+    private static final Logger              logger = Logger.getLogger(ConfigurationLoader.class);
+    private static       String              configurationFileName;
     private static       Map<String, String> propertyMap;
     private static       InputStream         inputStream;
 
     private ConfigurationLoader() {
     }
 
-    public static void initialize() throws IOException {
+    public static void initialize(String language) throws IOException {
 
         try {
             logger.debug("Initializing the configuration...");
+            configurationFileName = "configuration_" + language + ".properties";
             Properties properties = new Properties();
             propertyMap = new HashMap<>();
-            inputStream = ConfigurationLoader.class.getClassLoader().getResourceAsStream(CONFIGURATION_FILE_NAME);
+            inputStream = ConfigurationLoader.class.getClassLoader().getResourceAsStream(configurationFileName);
 
             if (inputStream == null)
-                throw new FileNotFoundException("Property file " + CONFIGURATION_FILE_NAME + " not found in the class classpath.");
+                throw new FileNotFoundException("Property file " + configurationFileName + " not found in the class classpath.");
 
             properties.load(inputStream);
 

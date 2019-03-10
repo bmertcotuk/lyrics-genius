@@ -1,4 +1,4 @@
-package com.bmcotuk.lyricsgenius.data;
+package com.bmcotuk.lyricsgenius.enums;
 
 /**
  * Author: B. Mert Cotuk

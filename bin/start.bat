@@ -1,1 +1,1 @@
-java -jar ..\LyricsGenius.jar
+java -jar ..\LyricsGenius.jar EN

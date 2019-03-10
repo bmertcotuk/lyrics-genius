@@ -9,7 +9,7 @@ package com.bmcotuk.lyricsgenius.gui;
 
 import com.bmcotuk.lyricsgenius.conf.ConfigurationLoader;
 import com.bmcotuk.lyricsgenius.core.RhymeEngine;
-import com.bmcotuk.lyricsgenius.data.MatchFrom;
+import com.bmcotuk.lyricsgenius.enums.MatchFrom;
 import org.apache.log4j.Logger;
 
 import javax.swing.*;
@@ -65,14 +65,14 @@ public class ApplicationFrame extends JFrame {
         EventQueue.invokeLater(() -> {
             try {
                 logger.debug("Started Lyrics Genius v3");
-                ConfigurationLoader.initialize();
+                String language = args[0];
+                ConfigurationLoader.initialize(language);
                 ApplicationFrame frame = new ApplicationFrame();
                 ImageIcon frameIconImg = new ImageIcon(DIR_APP_LOGO);
                 frame.setIconImage(frameIconImg.getImage());
                 frame.setVisible(true);
-                String languageDir = ConfigurationLoader.getString("language");
-                DIR_ALL_WORDS = languageDir + "/all.txt";
-                DIR_USER_WORDS = languageDir + "/user.txt";
+                DIR_ALL_WORDS = language + "/all.txt";
+                DIR_USER_WORDS = language + "/user.txt";
                 RhymeEngine.getInstance().getAllWords(DIR_ALL_WORDS, wordsAll);
                 RhymeEngine.getInstance().getAllWords(DIR_USER_WORDS, wordsAll);
                 Collections.sort(wordsAll);
