@@ -1,18 +1,20 @@
 
-8squid:S3010"#Remove this assignment of "degree".(Ë‘ÎÊ
-=squid:S3010"#Remove this assignment of "degree".(•âòµøÿÿÿÿ
-fsquid:S1192"QDefine a constant instead of duplicating this literal "defaultTypeFace" 21 times.(¢´Í…
-=squid:S3010"#Remove this assignment of "degree".(•âòµøÿÿÿÿ
-Ksquid:S2696"6Make the enclosing method "static" or remove this set.(Ë‘ÎÊ
-esquid:S1192"KDefine a constant instead of duplicating this literal "IO failed." 3 times.(ÐÍ§¶ùÿÿÿÿ
-Psquid:S2696"6Make the enclosing method "static" or remove this set.(•âòµøÿÿÿÿ
-Psquid:S2696"6Make the enclosing method "static" or remove this set.(•âòµøÿÿÿÿ
-gsquid:S3776"RRefactor this method to reduce its Cognitive Complexity from 84 to the 15 allowed.(…ÃÓ°
-=squid:S3010"#Remove this assignment of "degree".(•âòµøÿÿÿÿ
-Ksquid:S2696"6Make the enclosing method "static" or remove this set.(Ë‘ÎÊ
-8squid:S3010"#Remove this assignment of "degree".(Ë‘ÎÊ
-hsquid:MaximumInheritanceDepth"<This class has 6 parents which is greater than 5 authorized.(®é’Ôýÿÿÿÿ
-Psquid:S2696"6Make the enclosing method "static" or remove this set.(•âòµøÿÿÿÿ
-psquid:S1192"VDefine a constant instead of duplicating this literal "defaultLabelTextSize" 15 times.(òƒ©Ðþÿÿÿÿ
-8squid:S3010"#Remove this assignment of "degree".(Ë‘ÎÊ
-Ksquid:S2696"6Make the enclosing method "static" or remove this set.(Ë‘ÎÊ
+Gsquid:S3010ë"#Remove this assignment of "degree".(•âòµøÿÿÿÿ8°¸øÐ•-
+Bsquid:S3010Ý"#Remove this assignment of "degree".(Ë‘ÎÊ8˜‚ŠÒ•-
+Usquid:S2696Ç"6Make the enclosing method "static" or remove this set.(Ë‘ÎÊ8˜‚ŠÒ•-
+Bsquid:S3010Ç"#Remove this assignment of "degree".(Ë‘ÎÊ8˜‚ŠÒ•-
+Zsquid:S2696Ê"6Make the enclosing method "static" or remove this set.(•âòµøÿÿÿÿ8˜‚ŠÒ•-
+Usquid:S2696è"6Make the enclosing method "static" or remove this set.(Ë‘ÎÊ8°¸øÐ•-
+psquid:S3776U"RRefactor this method to reduce its Cognitive Complexity from 84 to the 15 allowed.(…ÃÓ°8˜‚ŠÒ•-
+Gsquid:S3010Ê"#Remove this assignment of "degree".(•âòµøÿÿÿÿ8˜‚ŠÒ•-
+Zsquid:S2696Ä"6Make the enclosing method "static" or remove this set.(•âòµøÿÿÿÿ8°¸øÐ•-
+nsquid:S1192P"KDefine a constant instead of duplicating this literal "IO failed." 3 times.(ÐÍ§¶ùÿÿÿÿ8˜‚ŠÒ•-
+|squid:S3008:"YRename this field "DIR_USER_WORDS" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(“Ãµøÿÿÿÿ8ÈÇ‹Ò•-
+Gsquid:S3010Ä"#Remove this assignment of "degree".(•âòµøÿÿÿÿ8°¸øÐ•-
+ysquid:S1192w"VDefine a constant instead of duplicating this literal "defaultLabelTextSize" 15 times.(òƒ©Ðþÿÿÿÿ8˜‚ŠÒ•-
+Usquid:S2696Ý"6Make the enclosing method "static" or remove this set.(Ë‘ÎÊ8˜‚ŠÒ•-
+{squid:S30089"XRename this field "DIR_ALL_WORDS" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Õ‘œ›ûÿÿÿÿ8ÈÇ‹Ò•-
+qsquid:MaximumInheritanceDepth"<This class has 6 parents which is greater than 5 authorized.(®é’Ôýÿÿÿÿ8°¸øÐ•-
+Zsquid:S2696ë"6Make the enclosing method "static" or remove this set.(•âòµøÿÿÿÿ8°¸øÐ•-
+osquid:S1192u"QDefine a constant instead of duplicating this literal "defaultTypeFace" 21 times.(¢´Í…8˜‚ŠÒ•-
+Bsquid:S3010è"#Remove this assignment of "degree".(Ë‘ÎÊ8°¸øÐ•-
