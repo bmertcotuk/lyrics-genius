@@ -6,7 +6,7 @@
 
     <groupId>com.bmcotuk.lyricsgenius</groupId>
     <artifactId>LyricsGenius</artifactId>
-    <version>03.01.00</version>
+    <version>03.02.00</version>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>

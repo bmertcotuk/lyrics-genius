@@ -82,6 +82,10 @@ public class ApplicationFrame extends JFrame {
         });
     }
 
+    public void showInResultsFrame() {
+        new ResultsFrame(wordsRhyming).setVisible(true);
+    }
+
     public ApplicationFrame() {
 
         setDefaultCloseOperation(3);
@@ -227,6 +231,9 @@ public class ApplicationFrame extends JFrame {
                         comboBox.removeAllItems();
                         for (int i = 0; i < wordsRhyming.size(); i++)
                             comboBox.addItem(wordsRhyming.get(i));
+
+                        showInResultsFrame();
+
                     } else if (arg0.getKeyChar() == 'd') {
                         if (degree > 0)
                             degree -= 1;
@@ -312,6 +319,8 @@ public class ApplicationFrame extends JFrame {
                 comboBox.removeAllItems();
                 for (int i = 0; i < wordsRhyming.size(); i++)
                     comboBox.addItem(wordsRhyming.get(i));
+
+                showInResultsFrame();
             }
         });
         rhymeButton.setBackground(Color.ORANGE);
@@ -578,6 +587,9 @@ public class ApplicationFrame extends JFrame {
                         comboBox.removeAllItems();
                         for (int i = 0; i < wordsRhyming.size(); i++)
                             comboBox.addItem(wordsRhyming.get(i));
+
+                        showInResultsFrame();
+
                     } else if (arg0.getKeyChar() == 'd') {
                         if (degree > 0)
                             degree -= 1;
