@@ -57,8 +57,4 @@ Please feel free to contribute the project by creating a pull request.
 
 * **Mert Çotuk** - *Initial work* - [bmertcotuk](https://github.com/bmertcotuk)
 
-## License
-
-This project is licensed under the GNU GPLv3.
-
 
